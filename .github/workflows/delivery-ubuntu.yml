@@ -11,7 +11,7 @@ on:
         required: true
 
 env:
-  MAINTAINER_NAME: "reophosx"
+  MAINTAINER_NAME: "Roopesh V S"
   MAINTAINER_EMAIL: "txtmeroopesh@gmail.com"
   PACKAGE_NAME: "reophosx-pack-cli"
 
