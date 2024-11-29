@@ -10,7 +10,7 @@ function create_ppa() {
 
   echo "> Importing GPG keys..."
   gpg --import <(echo "$GPG_PUBLIC_KEY")
-  gpg --allow-secret-key-import --import <(echo "$GPG_PRIVATE_KEY")
+  gpg --batch --allow-secret-key-import --import <(echo "$GPG_PRIVATE_KEY")
 
   # Dependencies fail to be pulled in during the Launchpad build process.
   echo "> Vendoring dependencies..."
