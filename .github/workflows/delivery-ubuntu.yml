@@ -78,7 +78,7 @@ jobs:
               GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
               GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}
               PACKAGE_VERSION: ${{ steps.version.outputs.result }}
-              GPG_TTY: $(tty)
+              GPG_TTY: $TTY
 
           - name: Deliver focal
             if: matrix.target == 'focal'
