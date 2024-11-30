@@ -1,4 +1,4 @@
 function upload_ppa {
     echo "> Uploading PPA..."
-    dput "ppa:cncf-buildpacks/pack-cli" ./../*.changes
+    dput "ppa:reophosx/pack-cli" ./../*.changes
 }
