@@ -58,6 +58,8 @@ function create_ppa() {
   rm -f debian/*.EX
   rm -f debian/README.*
 
+  export GPG_TTY=
+
   # Ubuntu ONLY accepts source packages.
   echo "> Build a source based debian package..."
   debuild -S
