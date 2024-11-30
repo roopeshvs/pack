@@ -9,8 +9,6 @@ function create_ppa() {
   : "$SCRIPT_DIR"
 
   export GPG_TTY=$(tty)
-  export TMPDIR="${SCRIPT_DIR}"
-  export DEBSIGN_TMPDIR="${SCRIPT_DIR}"
 
   echo "> Importing GPG keys..."
   gpg --import <(echo "$GPG_PUBLIC_KEY")
@@ -59,6 +57,9 @@ function create_ppa() {
   rm -f debian/*.ex
   rm -f debian/*.EX
   rm -f debian/README.*
+
+
+  echo "test" | gpg --clearsign
 
   # Ubuntu ONLY accepts source packages.
   echo "> Build a source based debian package..."
