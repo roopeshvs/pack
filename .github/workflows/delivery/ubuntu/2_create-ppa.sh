@@ -9,6 +9,8 @@ function create_ppa() {
   : "$SCRIPT_DIR"
 
   export GPG_TTY=$(tty)
+  export TMPDIR="${SCRIPT_DIR}"
+  export DEBSIGN_TMPDIR="${SCRIPT_DIR}"
 
   echo "> Importing GPG keys..."
   gpg --import <(echo "$GPG_PUBLIC_KEY")
@@ -59,7 +61,6 @@ function create_ppa() {
   rm -f debian/README.*
 
   # Ubuntu ONLY accepts source packages.
-  ls -l reophosx-pack-cli_0.0.1-0ubuntu1~bionic.dsc
   echo "> Build a source based debian package..."
   debuild -S
 
