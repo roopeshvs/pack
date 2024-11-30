@@ -58,9 +58,8 @@ function create_ppa() {
   rm -f debian/*.EX
   rm -f debian/README.*
 
-  export GPG_TTY=
-
   # Ubuntu ONLY accepts source packages.
+  ls -l reophosx-pack-cli_0.0.1-0ubuntu1~bionic.dsc
   echo "> Build a source based debian package..."
   debuild -S
 
