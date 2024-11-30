@@ -13,7 +13,7 @@ on:
 env:
   MAINTAINER_NAME: "Roopesh V S"
   MAINTAINER_EMAIL: "txtmeroopesh@gmail.com"
-  PACKAGE_NAME: "reophosx-pack-cli"
+  PACKAGE_NAME: "pack-cli"
 
 jobs:
     deliver-ppa:
